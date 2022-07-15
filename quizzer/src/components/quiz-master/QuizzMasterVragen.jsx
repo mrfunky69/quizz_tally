@@ -81,7 +81,7 @@ class VragenUI extends React.Component {
                 <Button variant="danger" type="submit" onClick={() => {
                     startQuestion(this.props.gameRoom, this.props.roundNumber, this.state.selectedQuestion)
                 }}>
-                    Start vraag
+                    Start Task
                 </Button>
             )
         }
@@ -96,8 +96,8 @@ class VragenUI extends React.Component {
                             <div className="nav flex-column bg-white shadow-sm font-italic rounded p-3 text-center">
                                 <h3 className={"text-center"}>Quiz info</h3>
                                 <hr/>
-                                <p><b>Gameroom naam</b><br/>{this.props.gameRoom}</p>
-                                <p><b>Huidige ronde</b><br/>{this.props.roundNumber}</p>
+                                <p><b>Gameroom name</b><br/>{this.props.gameRoom}</p>
+                                <p><b>Current lap</b><br/>{this.props.roundNumber}</p>
                                 {startQuestionButton}
                             </div>
                         </Col>
@@ -105,7 +105,7 @@ class VragenUI extends React.Component {
                         <Col lg={8} className={"mb-5"}>
                             <div className="p-5 bg-white d-flex align-items-center shadow-sm rounded h-100">
                                 <div className="demo-content">
-                                    <p className="lead font-italic"><b>- Vragen</b></p>
+                                    <p className="lead font-italic"><b>- Task</b></p>
                                     <Row>
                                         {this.getQuestions()}
                                     </Row>

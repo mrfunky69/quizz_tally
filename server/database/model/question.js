@@ -3,19 +3,19 @@ const TeamAnswer = require('./teamAnswer');
 
 //Create schema
 const questionScheme = new mongoose.Schema({
-    vraag: {
+    Task: {
         type: String,
         // required: true,
     },
-    antwoord: {
+    answer: {
         type: String,
         // required: true,
     },
-    categorie_naam: {
+    categorie_name: {
         type: String,
         // required: true
     },
-    team_antwoorden: {
+    team_answers: {
         type: [{type: TeamAnswer, ref: "TeamAnswer"}],
     }
 });

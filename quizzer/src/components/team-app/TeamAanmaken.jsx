@@ -36,7 +36,7 @@ class TeamAanmakenUI extends React.Component {
         if (this.props.teamNameStatus === 'deleted') {
             store.addNotification({
                 title: 'Quizzer',
-                message: 'Je bent uit de game gekickt 😂',
+                message: 'You have been kicked out of the game 😂',
                 type: 'danger',                          // 'default', 'success', 'info', 'warning'
                 container: 'top-right',                  // where to position the notifications
                 animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
@@ -120,7 +120,7 @@ class TeamAanmakenUI extends React.Component {
         }
     }
 
-    // Deze fucntie wordt in geladen als team status pending is
+    // This function will be loaded when team status is pending
     loadingAnimation() {
         return (
             <Container>
@@ -136,8 +136,8 @@ class TeamAanmakenUI extends React.Component {
                         </div>
                         <div className="text-white">
                             <div className="col-lg-10 mx-auto text-center">
-                                <p className="lead">Aan het laden...</p>
-                                <p className="lead">Wacht op de Quizz Master</p>
+                                <p className="lead">Loading...</p>
+                                <p className="lead">Wait for the Quizz Master</p>
                             </div>
                         </div>
                     </Col>
@@ -146,19 +146,19 @@ class TeamAanmakenUI extends React.Component {
         )
     }
 
-    // Deze fucntie wordt in geladen als team status niet geset is
+    // This function will be loaded if team status is not set
     joinGameForm() {
         return (
             <Container>
                 <Row className="min-vh-100">
-                    <HeaderTitel subTitle={"Join hier een bestaande nieuwe Quizzer"}/>
+                    <HeaderTitel subTitle={"Join an existing new Quizzer here"}/>
                     <Col md={{span: 8, offset: 2}} className="h-100">
                         <Card bg="dark" border="danger" text="white">
-                            <Card.Header>Join een bestaande Quizzer</Card.Header>
+                            <Card.Header>Join an existing Quizzer</Card.Header>
                             <Card.Body>
                                 <Form onSubmit={this.handleSubmit}>
                                     <Form.Group>
-                                        <Form.Label>Vul hier een bestaande game room in</Form.Label>
+                                        <Form.Label>Enter an existing game room here</Form.Label>
                                         <Form.Control type="text"
                                                       value={this.state.gameRoomName}
                                                       onChange={this.onChangeGameRoomName}
@@ -166,7 +166,7 @@ class TeamAanmakenUI extends React.Component {
                                                       placeholder="Game room naam"
                                                       autoComplete="off"/>
                                         <div className="invalid-feedback">
-                                            Huh, deze game room bestaat niet
+                                             Huh, this game room doesn't exist
                                             <span role={"img"} aria-label={"sad"}>😨</span>
                                         </div>
                                     </Form.Group>
@@ -174,7 +174,7 @@ class TeamAanmakenUI extends React.Component {
                                         {this.gameRoomAlreadyStarted("De game is al begonnen! 😨")}
                                     </div>
                                     <Form.Group>
-                                        <Form.Label>Vul hier uw team naam in.</Form.Label>
+                                        <Form.Label>Enter your name here.</Form.Label>
                                         <Form.Control type="text"
                                                       value={this.state.teamName}
                                                       onChange={this.onChangeTeamName}
@@ -182,12 +182,12 @@ class TeamAanmakenUI extends React.Component {
                                                       placeholder="team naam"
                                                       autoComplete="off"/>
                                         <div className="invalid-feedback">
-                                            Huh, deze team naam is bezet
+                                            Huh, this name is taken
                                             <span role={"img"} aria-label={"sad"}>😪</span>
                                         </div>
                                     </Form.Group>
-                                    <Button variant="danger" type="submit">Bevestigen</Button>
-                                    <Link to="/" className="btn btn-link">Annuleren</Link>
+                                    <Button variant="danger" type="submit">To confirm</Button>
+                                    <Link to="/" className="btn btn-link">Cancel</Link>
                                 </Form>
                             </Card.Body>
                         </Card>
@@ -197,7 +197,7 @@ class TeamAanmakenUI extends React.Component {
         )
     }
 
-    // Deze fucntie wordt in geladen als team status success is
+    // This function is loaded when team status is success
     teamAccepted() {
         return (
             <Container>
@@ -205,10 +205,10 @@ class TeamAanmakenUI extends React.Component {
                     <HeaderTitel/>
                     <Alert className={"h-25 d-inline-block w-100"} variant="light">
                         <Alert.Heading className={"text-center"}><strong>{this.props.teamRoomName}</strong> is
-                            geaccepteerd <span role="img" aria-label="success">🤖</span></Alert.Heading>
+                        accepted <span role="img" aria-label="success">🤖</span></Alert.Heading>
                         <p className={"text-center"}>
-                            Wacht totdat de Quizz Master van <strong>{this.props.gameRoomName}</strong> de quiz gaat
-                            starten.
+                        Wait for the Quizz Master of <strong>{this.props.gameRoomName}</strong> the quiz goes
+                            start.
                         </p>
                     </Alert>
                 </Row>

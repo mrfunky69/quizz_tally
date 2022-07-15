@@ -20,7 +20,7 @@ class ScorebordAntwoordUI extends React.Component {
         });
 
         return currentTeamsScoreboard.map((teamName) => {
-            let isAnswered = teamName.isAnswered ? <b style={{color: '#28a745'}}>Vraag beantwoord</b> : <b style={{color: '#dc3545'}}>Nog geen antwoord gegeven</b>;
+            let isAnswered = teamName.isAnswered ? <b style={{color: '#28a745'}}>Question answered</b> : <b style={{color: '#dc3545'}}>No answer given yet</b>;
             return (
                 <Col md={{span: 4}} key={teamName._id}>
                     <Card>

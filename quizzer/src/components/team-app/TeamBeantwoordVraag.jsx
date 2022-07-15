@@ -52,7 +52,7 @@ class TeamBeantwoordVraagUI extends React.Component {
                         sendGetTeamIsAnsweredMSG(this.props.teamName,true);
                         store.addNotification({
                             title: 'Quizzer',
-                            message: 'Antwoord verstuurd naar de Quiz Master 😉',
+                            message: 'Answer sent to the Quiz Master 😉',
                             type: 'success',                         // 'default', 'success', 'info', 'warning'
                             container: 'top-right',                  // where to position the notifications
                             animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
@@ -70,7 +70,7 @@ class TeamBeantwoordVraagUI extends React.Component {
         return (
             <Container>
                 <Row className="min-vh-100">
-                    <HeaderTitel subTitle={"Beantwoord met je team de huidige vraag"}/>
+                    <HeaderTitel subTitle={"Answer the current question "}/>
                     <Col md={{span: 10, offset: 1}}>
                         <Card>
                             <Card.Body>
@@ -90,12 +90,12 @@ class TeamBeantwoordVraagUI extends React.Component {
                     </Col>
                     <Col md={{span: 10, offset: 1}}>
                         <Card bg="dark" border="danger" text="white">
-                            <Card.Header>Beantwoord hier de vraag!</Card.Header>
+                            <Card.Header>Answer the question here!</Card.Header>
                             <Card.Body>
                                 <Form onSubmit={this.handleSubmit}>
                                     <Form.Group>
                                         <Form.Label>
-                                            U kunt uw antwoord wijzigen totdat de Quizz Master de vraag sluit!
+                                            You can change your answer until the Quizz Master closes the question!
                                         </Form.Label>
                                         <Form.Control maxlength={50}
                                                       type="text"
@@ -105,7 +105,7 @@ class TeamBeantwoordVraagUI extends React.Component {
                                                       autoComplete="off"
                                                       required/>
                                     </Form.Group>
-                                    <Button variant="danger" type="submit">Vraag beantwoorden</Button>
+                                    <Button variant="danger" type="submit">Answer question</Button>
                                 </Form>
                             </Card.Body>
                         </Card>

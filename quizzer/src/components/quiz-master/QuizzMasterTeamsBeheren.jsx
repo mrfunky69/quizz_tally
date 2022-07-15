@@ -17,23 +17,24 @@ class TeamsBeherenUI extends React.Component {
                         teamStatus = (
                             <div className="text-center">
                                 <Badge pill variant="success">
-                                    Geaccepteerd
+                                Accepted
                                 </Badge>
                             </div>
                         )
                     } else {
+                        
                         teamStatus = (
                             <div>
-                                <Card.Text className="text-center">Team accepteren?</Card.Text>
+                                <Card.Text className="text-center">Team accept?</Card.Text>
                                 <Button variant="success" className={"float-left"} onClick={() => {
                                     acceptTeam(this.props.gameRoom, teamName['_id'])
                                 }}>
-                                    Ja
+                                    Yes
                                 </Button>
                                 <Button variant="danger" className={"float-right"} onClick={() => {
                                     deleteTeam(this.props.gameRoom, teamName['_id'])
                                 }}>
-                                    Nee
+                                    No
                                 </Button>
                             </div>
                         )
@@ -78,7 +79,7 @@ class TeamsBeherenUI extends React.Component {
                 <div className="row py-5 text-white">
                     <div className="col-lg-9 mx-auto text-center">
                         <h1 className="display-3">Quizzer Night</h1>
-                        <p className="lead mb-0">Dit is het quiz master paneel</p>
+                        <p className="lead mb-0">This is the quiz master panel</p>
                     </div>
                 </div>
 
@@ -88,7 +89,7 @@ class TeamsBeherenUI extends React.Component {
                             <div className="nav flex-column bg-white shadow-sm font-italic rounded p-3">
                                 <h3 className={"text-center"}>Quiz info</h3>
                                 <hr/>
-                                <p><b>Gameroom naam:</b> {this.props.gameRoom}</p>
+                                <p><b>Gameroom name:</b> {this.props.gameRoom}</p>
                                 {this.startGameButton()}
                             </div>
                         </div>

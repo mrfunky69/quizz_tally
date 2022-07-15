@@ -13,11 +13,11 @@ export class TeamQuizMasterDcMelding extends React.Component {
                     <Alert className={"h-25 d-inline-block w-100"} variant="light">
                         <Alert.Heading className={"text-center"}>
                             <span role="img" aria-label="end">😓 </span>
-                            Quiz Master heeft het spel verlaten
+                            Quiz Master has left the game
                             <span role="img" aria-label="success"> 😓</span>
                         </Alert.Heading>
                         <p className={"text-center"}>
-                            Bekijk de eindscore op het scorebord.
+                            View the final score on the leaderboard.
                         </p>
                     </Alert>
                 </Row>

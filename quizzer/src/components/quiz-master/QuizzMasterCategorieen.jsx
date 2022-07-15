@@ -93,7 +93,7 @@ class CategorieenUI extends React.Component {
                 <Button variant="danger" type="submit" onClick={() => {
                     startRound(this.props.gameRoom, this.state.selectedCategories)
                 }}>
-                    Start ronde
+                    Start round
                 </Button>
             )
         }
@@ -102,7 +102,7 @@ class CategorieenUI extends React.Component {
                 <Row className="row py-5 text-white">
                     <Col lg={9} className={"mx-auto text-center"}>
                         <h1 className="display-3">Quizzer Night</h1>
-                        <p className="lead mb-0">Kies hier drie categorieën waar de ronde over moet gaan.</p>
+                        <p className="lead mb-0">Choose three categories here that the round should be about.</p>
                     </Col>
                 </Row>
                 <div className="rounded">
@@ -111,8 +111,8 @@ class CategorieenUI extends React.Component {
                             <div className="nav flex-column bg-white shadow-sm font-italic rounded p-3 text-center">
                                 <h3 className={"text-center"}>Quiz info</h3>
                                 <hr/>
-                                <p><b>Gameroom naam</b><br/>{this.props.gameRoom}</p>
-                                <p><b>Huidige ronde</b><br/>{this.props.roundNumber}</p>
+                                <p><b>Game room name</b><br/>{this.props.gameRoom}</p>
+                                <p><b>Current lap</b><br/>{this.props.roundNumber}</p>
                                 {startRoundButton}
                             </div>
                         </Col>
@@ -120,7 +120,7 @@ class CategorieenUI extends React.Component {
                         <Col lg={8} className={"mb-5"}>
                             <div className="p-5 bg-white d-flex align-items-center shadow-sm rounded h-100">
                                 <div className="demo-content">
-                                    <p className="lead font-italic"><b>- Ronde categorieën</b></p>
+                                    <p className="lead font-italic"><b>- Round categories</b></p>
                                     <Row>
                                         {this.getCategories()}
                                     </Row>

@@ -3,7 +3,7 @@ const Question = require('./question');
 
 //Create schema
 const roundScheme = new mongoose.Schema({
-    ronde_status: {
+    round_status: {
         type: String,
         // required: true,
     },

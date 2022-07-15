@@ -77,10 +77,10 @@ class GameAanmakenUI extends React.Component {
                     <Col md={{span: 8, offset: 2}} className="h-100">
                         <Form onSubmit={this.handleSubmit}>
                             <Card bg="dark" border="danger" text="white">
-                                <Card.Header>Maak een nieuwe Quizzer aan</Card.Header>
+                                <Card.Header>Create a new Quizzer</Card.Header>
                                 <Card.Body>
                                     <Form.Group>
-                                        <Form.Label>Vul hier de game room naam in</Form.Label>
+                                        <Form.Label>Enter the game room name here</Form.Label>
                                         <Form.Control value={this.state.gameRoomName}
                                                       onChange={this.onChangeGameRoomName}
                                                       type="text"
@@ -88,13 +88,13 @@ class GameAanmakenUI extends React.Component {
                                                       className={this.errorMessage()}
                                                       autoComplete="off"
                                                       required/>
-                                        <div className="invalid-feedback">Deze game room naam is al bezet <span
+                                        <div className="invalid-feedback">This game room name is already taken<span
                                             role={"img"} aria-label={""}>😢</span></div>
                                     </Form.Group>
                                     <Button variant="danger" type="submit">
-                                        Spel aanmaken
+                                    Create game
                                     </Button>
-                                    <Link to="/" className="btn btn-link">Annuleren</Link>
+                                    <Link to="/" className="btn btn-link">Cancel</Link>
                                 </Card.Body>
                             </Card>
                         </Form>

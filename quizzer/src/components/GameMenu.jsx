@@ -8,7 +8,7 @@ class GameMenu extends React.Component {
                 <Menu/>
                 <div className="h-100 row align-items-center vh-100">
                     <h1 className="col-12 text-center display-2" style={{color: "white"}}>
-                        <b>Pub Game</b>
+                        <b>Quiz Game</b>
                         <br/>
                         <span className="display-3">Quizzer Night</span>
                     </h1>

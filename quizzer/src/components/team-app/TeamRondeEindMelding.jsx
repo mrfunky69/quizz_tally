@@ -11,10 +11,10 @@ export class TeamRondeEindMelding extends React.Component {
                 <Row className="min-vh-100">
                     <HeaderTitel/>
                     <Alert className={"h-25 d-inline-block w-100"} variant="light">
-                        <Alert.Heading className={"text-center"}><span role="img" aria-label="question">❓</span> Ronde
-                            is afgelopen <span role="img" aria-label="question">❓</span></Alert.Heading>
+                        <Alert.Heading className={"text-center"}><span role="img" aria-label="question">❓</span>Round
+                            is finished <span role="img" aria-label="question">❓</span></Alert.Heading>
                         <p className={"text-center"}>
-                            De Quiz Master bepaalt of er nog een ronde wordt gespeeld.
+                        The Quiz Master determines whether another round is played.
                         </p>
                     </Alert>
                 </Row>

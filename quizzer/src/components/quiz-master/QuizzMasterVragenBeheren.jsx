@@ -27,7 +27,7 @@ class VragenBeherenUI extends React.Component {
         });
 
         return currentTeamAnswers.map(teamName => {
-            let teamAnswer = teamName.teamAnswer ? teamName.teamAnswer : 'Nog geen antwoord gegeven';
+            let teamAnswer = teamName.teamAnswer ? teamName.teamAnswer : 'No answer given yet';
             let questionStatus;
 
             if (this.props.currentGameStatus === 'question_closed' && teamName.teamAnswer) {
@@ -49,11 +49,11 @@ class VragenBeherenUI extends React.Component {
 
             if (this.props.currentGameStatus === 'question_closed' && teamName.isCorrect === true) {
                 questionStatus =
-                    <p className={"text-center"} style={{color: '#28a745'}}><i>Antwoord is goedgekeurd</i></p>;
+                    <p className={"text-center"} style={{color: '#28a745'}}><i>Answer is approved</i></p>;
             }
             if (this.props.currentGameStatus === 'question_closed' && teamName.isCorrect === false) {
                 questionStatus =
-                    <p className={"text-center"} style={{color: '#dc3545'}}><i>Antwoord is afgewezen</i></p>;
+                    <p className={"text-center"} style={{color: '#dc3545'}}><i>Answer has been rejected</i></p>;
             }
 
             return (
@@ -77,7 +77,7 @@ class VragenBeherenUI extends React.Component {
                 <Button variant="danger" type="submit" onClick={() => {
                     closeCurrentQuestion(this.props.gameRoom, this.props.roundNumber)
                 }}>
-                    Vraag sluiten
+                    Close question
                 </Button>
             );
         } else if (this.props.currentGameStatus === 'question_closed') {
@@ -95,7 +95,7 @@ class VragenBeherenUI extends React.Component {
                     <Button variant="danger" type="submit" onClick={() => {
                         startQuestion(this.props.gameRoom, this.props.roundNumber)
                     }}>
-                        Volgende vraag
+                        Next question
                     </Button>
                 )
             }
@@ -110,7 +110,7 @@ class VragenBeherenUI extends React.Component {
                 <Row className="row py-5 text-white">
                     <Col lg={9} className={"mx-auto text-center"}>
                         <h1 className="display-3">Quizzer Night</h1>
-                        <p className="lead mb-0">Beheer hier de status van de huidige vraag.</p>
+                        <p className="lead mb-0">Bcheck the status of the current question here.</p>
                     </Col>
                 </Row>
 
@@ -120,9 +120,9 @@ class VragenBeherenUI extends React.Component {
                             <div className="nav flex-column bg-white shadow-sm font-italic rounded p-3 text-center">
                                 <h3 className={"text-center m-0"}>Quiz info</h3>
                                 <hr/>
-                                <p><b>Gameroom naam:</b><br/>{this.props.gameRoom}</p>
-                                <p><b>Ronde:</b><br/>{this.props.roundNumber}</p>
-                                <p><b>Vraag nr.:</b><br/>{this.props.questionNumber} / 12</p>
+                                <p><b>Gameroom name:</b><br/>{this.props.gameRoom}</p>
+                                <p><b>Round:</b><br/>{this.props.roundNumber}</p>
+                                <p><b>Question no.:</b><br/>{this.props.questionNumber} / 12</p>
 
                                 {this.closeQuestion()}
                             </div>
@@ -132,8 +132,8 @@ class VragenBeherenUI extends React.Component {
                             <div className="p-5 bg-white d-flex align-items-center shadow-sm rounded h-100">
                                 <div className="demo-content">
                                     <h5>{this.props.currentQuestion}</h5>
-                                    <p className="lead font-italic"><b>- Correcte
-                                        antwoord:</b> {this.props.currentQuestionAnswer}</p>
+                                    <p className="lead font-italic"><b>- Correct
+                                        answer:</b> {this.props.currentQuestionAnswer}</p>
                                     <Row>
                                         {this.teamAnswers()}
                                     </Row>

@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 
 //Create schema
 const teamAnswerSchema = new mongoose.Schema({
-    team_naam: {
+    team_name: {
         type: String,
         required: true,
     },
-    gegeven_antwoord: {
+    given_answer: {
         type: String,
         required: true,
     },

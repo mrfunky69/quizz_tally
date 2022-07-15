@@ -17,17 +17,17 @@ class EindRondeUI extends React.Component {
                     <Col md={{span: 12}} className={"text-white text-center"}>
                         <Card text="dark">
                             <Card.Body className={"text-center"}>
-                                <h1 className={"py-4"}>Wat is de bedoeling?</h1>
+                                <h1 className={"py-4"}>What is the purpose?</h1>
                                 <Button className={"float-left"} variant="danger" type="submit" onClick={() => {
                                     endGame(this.props.gameRoom)
                                 }}>
-                                    Quizzer afsluiten
+                                    Quizzer shut down
                                 </Button>
 
                                 <Button className={"float-right"} variant="success" type="submit" onClick={() => {
                                     startRound(this.props.gameRoom)
                                 }}>
-                                    Nog een ronde spelen
+                                    Play another round
                                 </Button>
                             </Card.Body>
                         </Card>

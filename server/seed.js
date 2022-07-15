@@ -6,7 +6,7 @@ const Games = mongoose.model('Games');
 const Questions = mongoose.model('Questions');
 const dbConfig = require('./config');
 
-mongoose.connect(`mongodb+srv://${dbConfig.USERNAME}:${dbConfig.PASSWORD}@${dbConfig.HOST}/${dbConfig.DB}?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://<username>:<password>@cluster0.loqluhn.mongodb.net/?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {

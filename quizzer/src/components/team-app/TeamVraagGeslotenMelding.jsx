@@ -11,10 +11,10 @@ export class TeamQuestions extends React.Component {
                 <Row className="min-vh-100">
                     <HeaderTitel/>
                     <Alert className={"h-25 d-inline-block w-100"} variant="light">
-                        <Alert.Heading className={"text-center"}><span role="img" aria-label="luck">🍀</span> Vraag
-                            gesloten <span role="img" aria-label="luck">🍀</span></Alert.Heading>
+                        <Alert.Heading className={"text-center"}><span role="img" aria-label="luck">🍀</span> task
+                            Closed <span role="img" aria-label="luck">🍀</span></Alert.Heading>
                         <p className={"text-center"}>
-                            Bekijk op het scorebord of je antwoord is goedgekeurd.
+                        Check the scoreboard to see if your answer has been approved.
                         </p>
                     </Alert>
                 </Row>

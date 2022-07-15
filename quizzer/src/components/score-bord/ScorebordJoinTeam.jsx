@@ -75,26 +75,26 @@ class ScorebordJoinTeamUI extends React.Component {
                     <Menu/>
                 </div>
                 <Row className="min-vh-100">
-                    <HeaderTitel subTitle={"Bekijk hier een huidig spel"}/>
+                    <HeaderTitel subTitle={"View a current game here"}/>
                     <Col md={{span: 8, offset: 2}} className="h-100">
                         <Form onSubmit={this.handleSubmit}>
                             <Card bg="dark" border="danger" text="white">
-                                <Card.Header>Bekijk een game</Card.Header>
+                                <Card.Header>Watch a game</Card.Header>
                                 <Card.Body>
                                     <Form.Group controlId="exampleForm.ControlInput1">
-                                        <Form.Label>Vul hier de game room naam in van de game die je wilt
-                                            zien!</Form.Label>
+                                        <Form.Label>Enter the game room name of the game you want here
+                                            to see!</Form.Label>
                                         <Form.Control type="text"
                                                       onChange={this.onChangeGameRoomName}
                                                       placeholder="Game room naam"
                                                       className={this.errorMessage()}
                                                       autoComplete="off"/>
-                                        <div className="invalid-feedback">Deze gameroom bestaat niet!</div>
+                                        <div className="invalid-feedback">This game room does not exist!</div>
                                     </Form.Group>
                                     <Button variant="danger" type="submit">
-                                        Ga naar scorebord overzicht
+                                    Go to scoreboard overview
                                     </Button>
-                                    <Link to="/" className="btn btn-link">Annuleren</Link>
+                                    <Link to="/" className="btn btn-link">Cancel</Link>
                                 </Card.Body>
                             </Card>
                         </Form>

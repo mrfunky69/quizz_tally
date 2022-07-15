@@ -79,7 +79,7 @@ router.delete('/games/:gameRoom/team/:teamName', async (req, res) => {
         //save gameRoomName document to MongoDB
         currentGame.save(function (err, game) {
             if (err) return console.error(err);
-            console.log(teamName + " verwijderd uit gameRoom: " + game._id);
+            console.log(teamName + " removed from gameRoom:" + game._id);
         });
 
         return res.json({
@@ -111,7 +111,7 @@ router.put('/games/:gameRoom/team/:teamName', async (req, res) => {
         //save gameRoomName document to MongoDB
         currentGame.save(function (err, game) {
             if (err) return console.error(err);
-            console.log(teamName + " geaccepteerd in gameRoom: " + game._id);
+            console.log(teamName + "accepted in gameRoom: " + game._id);
         });
 
         return res.json({

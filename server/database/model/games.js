@@ -16,7 +16,7 @@ const gamesSchema = new mongoose.Schema({
     teams: {
         type: [{type: Team, ref: "Team"}],
     },
-    rondes: {
+    rounds: {
         type: [{type: Round, ref: "Round"}],
     },
 });
