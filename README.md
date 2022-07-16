@@ -11,7 +11,7 @@
 
 ### How to install
 
-1. ``git clone https://github.com/aaron5670/Realtime-Pub-Quizz.git``
+1. ``git clone <url>
 2. Create a config.js file on the **server** with the following settings: 
 ```javascript
 //CLOUD.MONGODB.COM DEVELOPMENT  
